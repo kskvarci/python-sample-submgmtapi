@@ -13,7 +13,7 @@ credentials = ServicePrincipalCredentials(
 )
 
 billing_client = BillingManagementClient(credentials, subscription_id)
-subscription_client = SubscriptionClient(credentials, subscription_id)
+subscription_client = SubscriptionClient(credentials)
 
 # Obtain the list of accounts within the Enrollment
 enrollment_accounts = list(billing_client.enrollment_accounts.list())
